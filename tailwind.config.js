@@ -4,23 +4,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        wine: {
-          DEFAULT: '#6B1A2A',
-          dark: '#4A0F1C',
-          deep: '#2D0910',
+        maroon: {
+          DEFAULT: '#800020',
+          50: '#fff1f2',
+          100: '#fde8ea',
+          600: '#800020',
+          700: '#6b001b',
+          800: '#560016',
+          900: '#420011',
         },
-        gold: {
-          DEFAULT: '#C9A84C',
-          light: '#E2C97E',
-          pale: '#F5E8C4',
-        },
-      },
-      scale: {
-        98: '0.98',
       },
     },
   },
