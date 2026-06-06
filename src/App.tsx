@@ -318,7 +318,7 @@ function MenuCard({ name, price, description, image }: { name: string; price: st
   return (
     <article className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-        <span className="absolute right-3 top-3 z-10 rounded-xl bg-white text-[#800020] px-3 py-1.5 text-sm font-extrabold shadow-md text-center leading-relaxed">
+        <span className="absolute right-3 top-3 z-10 rounded-xl bg-white text-[#800020] px-3 py-1.5 text- font-bold shadow-md text-center leading-relaxed">
           {price}
         </span>
         {image ? (
@@ -627,7 +627,7 @@ function DrinksMenu({ onNavigate }: { onNavigate: (v: View) => void }) {
                     <h3 className="truncate text-base font-semibold text-gray-900 sm:text-lg">{d.name}</h3>
                     <span className="hidden flex-1 translate-y-[-3px] border-b border-dotted border-gray-200 sm:block" />
                   </div>
-                  <p className="mt-1 text-sm leading-relaxed text-gray-500">{d.description}</p>
+                
                 </div>
                 <span className="shrink-0 font-bold" style={{ color: '#800020' }}>{d.price}</span>
               </li>
