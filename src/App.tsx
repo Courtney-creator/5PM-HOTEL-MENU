@@ -84,12 +84,12 @@ export const IMG = {
   goat: "/goat.jpg",
   pork: "/pork.jpg",
   beef: "/beef.jpg",
-  broiler: U("photo-1610057099443-fde8c4d50f91"),
+  broiler: "/broil.jpg",
   kienyeji: "/chicken.jpg",
   tilapia: "/Tilapia fish.jpg",
   brisket: U("photo-1558030006-450675393462"),
   ribs: "/ribs.jpg",
-  chickenLegs: U("photo-1610057099443-fde8c4d50f91"),
+  chickenLegs: "leg.jpg",
 
 
   // Snacks & Kiddies
