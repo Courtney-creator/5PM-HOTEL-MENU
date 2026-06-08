@@ -377,7 +377,7 @@ function FilterPills<T extends string>({
       </div>
       {/* Fade + arrow indicator */}
       <div className="absolute right-0 top-0 h-full w-16 pointer-events-none flex items-center justify-end pr-1"
-        style={{ background: 'linear-gradient(to right, transparent, white)' }}>
+        style={{ background: 'linear-gradient(to right, transparent, maroon)' }}>
         <span className="text-gray-400 text-sm animate-pulse">›</span>
       </div>
     </div>
