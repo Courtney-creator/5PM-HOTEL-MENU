@@ -69,7 +69,7 @@ const U = (id: string, q = 80) =>
 export const IMG = {
   // Breakfast
   fullBreakfast: "/fullb.jpg",
-  lightBreakfast: "/light breakfast.jpg",
+  lightBreakfast: "/lb.jpg",
   pancakes: U("photo-1528207776546-365bb710ee93"),
   friedEggs: "/fried eggs.jpg",
   boiledEggs: "/Boild Egg.jpg",
@@ -102,9 +102,9 @@ export const IMG = {
   wingsFries: U("photo-1567620832903-9fc6debc209f"),
   baconFries: "/Fries and Bacon.jpg",
   fishFingers: "/Fish Fingers.jpg",
-  saladSweetPotato: U("photo-1546069901-ba9599a7e63c"),
-  salad5pm: U("photo-1540420773420-3366772f4999"),
-  caesar: U("photo-1550304943-4f24f54ddde9"),
+  saladSweetPotato: "/sps.jpg",
+  salad5pm: "/5pm.jpg",
+  caesar: "/css.jpg",
 
   // Side Dishes
   fries: "/fries.jpg",
@@ -384,84 +384,107 @@ function FilterPills<T extends string>({
 function Landing({ onNavigate }: { onNavigate: (v: View) => void }) {
   return (
     <div
-     className="h-screen w-full flex flex-col overflow-hidden"
-    style={{ background: 'radial-gradient(ellipse at center, #ffffff 0%, #fff5f5 45%, #8b2222 100%)' }}
-      >
+      className="h-screen w-full flex flex-col overflow-hidden"
+      style={{ background: '#FFFAF7' }}
+    >
+      {/* Warm top accent line */}
+      <div className="w-full h-[3px]"
+        style={{ background: 'linear-gradient(to right, #800020, #FF8C00, #800020)' }} />
+
       {/* Header */}
-      <header className="flex items-center justify-between px-8 sm:px-12 pt-8">
+      <header className="flex items-center justify-between px-8 sm:px-12 pt-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200">
-            <span className="text-[12px] font-black tracking-tighter text-gray-900">5PM</span>
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
+            style={{ background: '#800020' }}>
+            <span className="text-[11px] font-black tracking-tighter text-white">5PM</span>
           </div>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gray-400">
             Restaurant · Lounge
           </span>
         </div>
-        <span className="text-xs font-medium uppercase tracking-[0.25em] text-gray-300">
+        <span className="text-[10px] uppercase tracking-[0.3em] text-gray-300">
           Est. Nairobi
         </span>
       </header>
 
       {/* Main */}
       <main className="flex flex-1 flex-col items-center justify-center px-8 text-center">
-        
-        <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-gray-100 bg-gray-50 px-5 py-2">
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#C9A84C]" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gray-400">Open Today</span>
+
+        {/* Open badge */}
+        <div className="mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-white shadow-sm"
+          style={{ border: '1px solid rgba(128,0,32,0.15)' }}>
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FF8C00]" />
+          <span className="text-[9px] font-bold uppercase tracking-[0.28em]"
+            style={{ color: '#800020' }}>Open Today</span>
         </div>
 
+        {/* Heading */}
         <h1
           className="mb-5 text-gray-900"
           style={{
             fontFamily: "'Playfair Display', Georgia, serif",
             fontWeight: 800,
-            fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
-            lineHeight: 1.08,
+            fontSize: 'clamp(2.6rem, 7.5vw, 5rem)',
+            lineHeight: 1.1,
           }}
         >
-          Where every hour<br />tastes like{' '}
-          <em className="not-italic" style={{ color: '#C9A84C' }}>5PM.</em>
+          Where every hour<br />
+          tastes like{' '}
+          <span style={{ color: '#FF8C00' }}>5PM.</span>
         </h1>
 
-        <p className="mb-12 max-w-xs text-sm leading-relaxed text-gray-400 sm:text-base">
-          Slow-fired meats, hearty kitchen classics and a bar built for golden hour.
+        {/* Warm divider */}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-px w-14" style={{ background: 'linear-gradient(to right, transparent, #800020)' }} />
+          <span style={{ color: '#FF8C00', fontSize: '14px' }}>✦</span>
+          <div className="h-px w-14" style={{ background: 'linear-gradient(to left, transparent, #800020)' }} />
+        </div>
+
+        {/* Subtitle */}
+        <p className="mb-12 max-w-[260px] text-sm leading-relaxed text-gray-400">
+          Slow-fired meats, hearty classics<br />and a bar built for golden hour.
         </p>
 
-        <div className="flex w-full max-w-sm flex-col gap-3 sm:flex-row">
+        {/* Buttons */}
+        <div className="flex w-full max-w-xs flex-col gap-3 sm:flex-row">
           <button
             onClick={() => onNavigate('food')}
-            className="flex flex-1 items-center justify-between rounded-xl px-6 py-4 text-white transition-all hover:opacity-90"
-            style={{ background: '#1a1a1a' }}
+            className="flex flex-1 items-center justify-between rounded-xl px-6 py-4 transition-all hover:opacity-90 shadow-sm"
+            style={{ background: '#800020' }}
           >
             <div className="text-left">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] opacity-40">Kitchen</p>
-              <p className="text-sm font-bold">Food Menu</p>
+              <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-white/50 mb-0.5">Kitchen</p>
+              <p className="text-sm font-bold text-white">Food Menu</p>
             </div>
-            <span className="opacity-40">→</span>
+            <span className="text-white/40">→</span>
           </button>
 
           <button
             onClick={() => onNavigate('drinks')}
-            className="flex flex-1 items-center justify-between rounded-xl border border-gray-200 px-6 py-4 text-gray-900 transition-all hover:border-gray-300 hover:bg-gray-50"
+            className="flex flex-1 items-center justify-between rounded-xl px-6 py-4 transition-all hover:opacity-90 bg-white shadow-sm"
+            style={{ border: '1.5px solid rgba(77, 12, 28, 0.2)' }}
           >
             <div className="text-left">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-400">Bar</p>
-              <p className="text-sm font-bold">Drinks Menu</p>
+              <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-gray-400 mb-0.5">Bar</p>
+              <p className="text-sm font-bold" style={{ color: '#800020' }}>Drinks Menu</p>
             </div>
-            <span className="text-gray-300">→</span>
+            <span style={{ color: 'rgba(78, 14, 30, 0.3)' }}>→</span>
           </button>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="pb-8 text-center">
-        <p className="text-[10px] uppercase tracking-[0.3em] text-gray-200">Nairobi · Kenya</p>
+      <footer className="pb-5 text-center">
+        <p className="text-[9px] uppercase tracking-[0.4em] text-gray-300">Nairobi · Kenya</p>
       </footer>
+
+      {/* Warm bottom accent line */}
+      <div className="w-full h-[3px]"
+        style={{ background: 'linear-gradient(to right, #800020,rgb(236, 199, 153), #800020)' }} />
 
     </div>
   );
 }
-
 // ─────────────────────────────────────────────────────────────────────────────
 // FOOD MENU PAGE
 // ─────────────────────────────────────────────────────────────────────────────
