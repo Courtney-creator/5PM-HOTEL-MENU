@@ -20,7 +20,7 @@ import {
 
 type View = 'landing' | 'food' | 'drinks';
 
-type FoodCategory = 'Breakfast' | 'Grills' | 'Snacks and Kiddies' | 'Side Dishes';
+type FoodCategory = 'Breakfast' | 'Grills' | 'Snacks' | 'Sides';
 type DrinkCategory =
   | 'Beverages'
   | 'Beers'
@@ -92,7 +92,7 @@ export const IMG = {
   chickenLegs: "leg.jpg",
 
 
-  // Snacks & Kiddies
+  // Snacks 
   wings: "/wings.jpg",
   sliders: "/Pork Sliders.jpg",
   pigsBlanket: "/pib.jpg",
@@ -161,41 +161,41 @@ const FOOD_MENU: FoodItem[] = [
 { id: 32, name: 'Pork Ribs', category: 'Grills', price: 'KES 1,500', description: 'Fall-off-the-bone pork ribs glazed in smoky-sweet BBQ.', image: IMG.ribs },
 { id: 33, name: 'Chicken Legs', category: 'Grills', price: 'KES 800', description: 'Plump chicken legs in bold spices, open-flame grilled.', image: IMG.chickenLegs },
 
-  // SNACKS AND KIDDIES
-  { id: 50, name: 'Chicken Wings',        category: 'Snacks and Kiddies', price: 'KES 800', description: 'Crispy fried wings tossed in our house BBQ sauce.',                          image: IMG.wings },
-  { id: 51, name: 'Pork Sliders',         category: 'Snacks and Kiddies', price: 'KES 500', description: 'Soft mini buns with tender pulled pork and house sauce.',                    image: IMG.sliders },
-  { id: 52, name: 'Pigs in a Blanket',    category: 'Snacks and Kiddies', price: 'KES 450', description: 'Sausages wrapped in smoked bacon and flame-grilled.',                        image: IMG.pigsBlanket },
-  { id: 53, name: 'Meat Balls',           category: 'Snacks and Kiddies', price: 'KES 500', description: 'Perfectly seasoned meatballs in a rich tomato glaze.',                       image: IMG.meatballs },
-  { id: 54, name: 'Beef Burger',          category: 'Snacks and Kiddies', price: 'KES 700', description: 'Juicy beef patty, melted cheese, toasted bun, house sauce.',                 image: IMG.burger },
-  { id: 55, name: 'Choma Sausage',        category: 'Snacks and Kiddies', price: 'KES 450', description: 'Flame-grilled local choma sausage, sliced and warm.',                        image: IMG.chomaSausage },
-  { id: 56, name: 'Chicken Wings & Fries',category: 'Snacks and Kiddies', price: 'KES 800', description: 'Crispy wings with golden hand-cut fries.',                                   image: IMG.wingsFries },
-  { id: 57, name: 'Bacon & Fries',        category: 'Snacks and Kiddies', price: 'KES 700', description: 'Smoked bacon piled over hot, golden fries.',                                 image: IMG.baconFries },
-  { id: 58, name: 'Fish Fingers',         category: 'Snacks and Kiddies', price: 'KES 800', description: 'Breaded fish fingers, crisp and golden, with tartar sauce.',                  image: IMG.fishFingers },
-  { id: 59, name: 'Sweet Potato Salad',   category: 'Snacks and Kiddies', price: 'KES 350', description: 'Roasted sweet potato, sweet corn, capsicum and pineapple.',                  image: IMG.saladSweetPotato },
-  { id: 60, name: '5PM Salad',            category: 'Snacks and Kiddies', price: 'KES 300', description: 'Carrots, cucumber, mango, sultanas and capsicum — our signature.',            image: IMG.salad5pm },
-  { id: 61, name: 'Chicken Caesar Salad', category: 'Snacks and Kiddies', price: 'KES 650', description: 'Chargrilled chicken on romaine with parmesan and croutons.',                  image: IMG.caesar },
+  // SNACKS
+  { id: 50, name: 'Chicken Wings',        category: 'Snacks', price: 'KES 800', description: 'Crispy fried wings tossed in our house BBQ sauce.',                          image: IMG.wings },
+  { id: 51, name: 'Pork Sliders',         category: 'Snacks', price: 'KES 500', description: 'Soft mini buns with tender pulled pork and house sauce.',                    image: IMG.sliders },
+  { id: 52, name: 'Pigs in a Blanket',    category: 'Snacks', price: 'KES 450', description: 'Sausages wrapped in smoked bacon and flame-grilled.',                        image: IMG.pigsBlanket },
+  { id: 53, name: 'Meat Balls',           category: 'Snacks', price: 'KES 500', description: 'Perfectly seasoned meatballs in a rich tomato glaze.',                       image: IMG.meatballs },
+  { id: 54, name: 'Beef Burger',          category: 'Snacks', price: 'KES 700', description: 'Juicy beef patty, melted cheese, toasted bun, house sauce.',                 image: IMG.burger },
+  { id: 55, name: 'Choma Sausage',        category: 'Snacks', price: 'KES 450', description: 'Flame-grilled local choma sausage, sliced and warm.',                        image: IMG.chomaSausage },
+  { id: 56, name: 'Chicken Wings & Fries',category: 'Snacks', price: 'KES 800', description: 'Crispy wings with golden hand-cut fries.',                                   image: IMG.wingsFries },
+  { id: 57, name: 'Bacon & Fries',        category: 'Snacks', price: 'KES 700', description: 'Smoked bacon piled over hot, golden fries.',                                 image: IMG.baconFries },
+  { id: 58, name: 'Fish Fingers',         category: 'Snacks', price: 'KES 800', description: 'Breaded fish fingers, crisp and golden, with tartar sauce.',                  image: IMG.fishFingers },
+  { id: 59, name: 'Sweet Potato Salad',   category: 'Snacks', price: 'KES 350', description: 'Roasted sweet potato, sweet corn, capsicum and pineapple.',                  image: IMG.saladSweetPotato },
+  { id: 60, name: '5PM Salad',            category: 'Snacks', price: 'KES 300', description: 'Carrots, cucumber, mango, sultanas and capsicum — our signature.',            image: IMG.salad5pm },
+  { id: 61, name: 'Chicken Caesar Salad', category: 'Snacks', price: 'KES 650', description: 'Chargrilled chicken on romaine with parmesan and croutons.',                  image: IMG.caesar },
 
   // SIDE DISHES
-  { id: 70, name: 'French Fries',       category: 'Side Dishes', price: 'KES 250', description: 'Hand-cut fries, double-fried until perfectly crisp.',                                image: IMG.fries },
-  { id: 71, name: 'Potato Wedges',      category: 'Side Dishes', price: 'KES 250', description: 'Thick-cut seasoned wedges, oven-roasted golden.',                                    image: IMG.wedges },
-  { id: 72, name: 'Roast Potatoes',     category: 'Side Dishes', price: 'KES 250', description: 'Crisp outside, fluffy inside, finished with rosemary.',                              image: IMG.roastPotatoes },
-  { id: 73, name: 'Sautéed Potatoes',   category: 'Side Dishes', price: 'KES 300', description: 'Pan-tossed potatoes with herbs and garlic butter.',                                  image: IMG.sauteed },
-  { id: 74, name: 'Mashed Potatoes',    category: 'Side Dishes', price: 'KES 250', description: 'Silky, buttery mash with a hint of cream.',                                          image: IMG.mashed },
-  { id: 75, name: 'White Ugali',        category: 'Side Dishes', price: 'KES 100', description: 'Classic, freshly prepared white ugali.',                                             image: IMG.whiteugali },
-  { id: 76, name: 'Brown Ugali',        category: 'Side Dishes', price: 'KES 200', description: 'Wholesome brown ugali — rustic and nutty.',                                          image: IMG.brownugali },
-  { id: 77, name: 'Pumpkin Ugali',      category: 'Side Dishes', price: 'KES 200', description: 'Smooth ugali enriched with sweet pumpkin.',                                          image: IMG.pumpkinugali },
-  { id: 78, name: 'Seasoned Vegetables',category: 'Side Dishes', price: 'KES 100', description: 'Lightly sautéed seasonal greens with garlic and herbs.',                             image: IMG.veg },
-  { id: 79, name: 'Cabbage',            category: 'Side Dishes', price: 'KES 100', description: 'Tender braised cabbage with carrots and onion.',                                     image: IMG.cabbage },
-  { id: 80, name: 'Plain Rice',         category: 'Side Dishes', price: 'KES 200', description: 'Fluffy steamed long-grain rice.',                                                    image: IMG.whiterice },
-  { id: 81, name: 'Vegetable Rice',     category: 'Side Dishes', price: 'KES 300', description: 'Fragrant rice tossed with peas, carrots and capsicum.',                              image: IMG.vegetablerice },
-  { id: 82, name: 'Chapati',            category: 'Side Dishes', price: 'KES 100', description: 'Soft, flaky hand-rolled chapati.',                                                   image: IMG.chapati },
+  { id: 70, name: 'French Fries',       category: 'Sides', price: 'KES 250', description: 'Hand-cut fries, double-fried until perfectly crisp.',                                image: IMG.fries },
+  { id: 71, name: 'Potato Wedges',      category: 'Sides', price: 'KES 250', description: 'Thick-cut seasoned wedges, oven-roasted golden.',                                    image: IMG.wedges },
+  { id: 72, name: 'Roast Potatoes',     category: 'Sides', price: 'KES 250', description: 'Crisp outside, fluffy inside, finished with rosemary.',                              image: IMG.roastPotatoes },
+  { id: 73, name: 'Sautéed Potatoes',   category: 'Sides', price: 'KES 300', description: 'Pan-tossed potatoes with herbs and garlic butter.',                                  image: IMG.sauteed },
+  { id: 74, name: 'Mashed Potatoes',    category: 'Sides', price: 'KES 250', description: 'Silky, buttery mash with a hint of cream.',                                          image: IMG.mashed },
+  { id: 75, name: 'White Ugali',        category: 'Sides', price: 'KES 100', description: 'Classic, freshly prepared white ugali.',                                             image: IMG.whiteugali },
+  { id: 76, name: 'Brown Ugali',        category: 'Sides', price: 'KES 200', description: 'Wholesome brown ugali — rustic and nutty.',                                          image: IMG.brownugali },
+  { id: 77, name: 'Pumpkin Ugali',      category: 'Sides', price: 'KES 200', description: 'Smooth ugali enriched with sweet pumpkin.',                                          image: IMG.pumpkinugali },
+  { id: 78, name: 'Seasoned Vegetables',category: 'Sides', price: 'KES 100', description: 'Lightly sautéed seasonal greens with garlic and herbs.',                             image: IMG.veg },
+  { id: 79, name: 'Cabbage',            category: 'Sides', price: 'KES 100', description: 'Tender braised cabbage with carrots and onion.',                                     image: IMG.cabbage },
+  { id: 80, name: 'Plain Rice',         category: 'Sides', price: 'KES 200', description: 'Fluffy steamed long-grain rice.',                                                    image: IMG.whiterice },
+  { id: 81, name: 'Vegetable Rice',     category: 'Sides', price: 'KES 300', description: 'Fragrant rice tossed with peas, carrots and capsicum.',                              image: IMG.vegetablerice },
+  { id: 82, name: 'Chapati',            category: 'Sides', price: 'KES 100', description: 'Soft, flaky hand-rolled chapati.',                                                   image: IMG.chapati },
 ];
 
 const FOOD_CATEGORIES: { label: FoodCategory; icon: React.ReactNode }[] = [
   { label: 'Breakfast',          icon: <Sunrise size={14} /> },
   { label: 'Grills',             icon: <Flame size={14} /> },
-  { label: 'Snacks and Kiddies', icon: <Cookie size={14} /> },
-  { label: 'Side Dishes',        icon: <Salad size={14} /> },
+  { label: 'Snacks', icon: <Cookie size={14} /> },
+  { label: 'Sides',        icon: <Salad size={14} /> },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -353,30 +353,36 @@ function FilterPills<T extends string>({
   onChange: (v: T) => void;
 }) {
   return (
-    <div className="-mx-5 overflow-x-auto px-5 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-      <div className="flex gap-2.5 pb-1">
-        {categories.map(({ label, icon }) => {
-          const on = active === label;
-          return (
-            <button
-              key={label}
-              onClick={() => onChange(label)}
-              className={`flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
-                on
-                  ? 'border-[#800020] bg-[#800020] text-white shadow-md'
-                  : 'border-gray-200 bg-white text-gray-700 hover:border-[#800020]/40 hover:text-[#800020]'
-              }`}
-            >
-              <span className={on ? 'text-white' : 'text-[#800020]'}>{icon}</span>
-              {label}
-            </button>
-          );
-        })}
+    <div className="relative">
+      <div className="-mx-5 overflow-x-auto px-5 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex gap-2.5 pb-1">
+          {categories.map(({ label, icon }) => {
+            const on = active === label;
+            return (
+              <button
+                key={label}
+                onClick={() => onChange(label)}
+                className={`flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
+                  on
+                    ? 'border-[#800020] bg-[#800020] text-white shadow-md'
+                    : 'border-gray-200 bg-white text-gray-700 hover:border-[#800020]/40 hover:text-[#800020]'
+                }`}
+              >
+                <span className={on ? 'text-white' : 'text-[#800020]'}>{icon}</span>
+                {label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      {/* Fade + arrow indicator */}
+      <div className="absolute right-0 top-0 h-full w-16 pointer-events-none flex items-center justify-end pr-1"
+        style={{ background: 'linear-gradient(to right, transparent, white)' }}>
+        <span className="text-gray-400 text-sm animate-pulse">›</span>
       </div>
     </div>
   );
 }
-
 // ─────────────────────────────────────────────────────────────────────────────
 // LANDING PAGE
 // ─────────────────────────────────────────────────────────────────────────────
@@ -396,14 +402,14 @@ function Landing({ onNavigate }: { onNavigate: (v: View) => void }) {
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
             style={{ background: '#800020' }}>
-            <span className="text-[11px] font-black tracking-tighter text-white">5PM</span>
+            <span className="text-[15px] font-black tracking-tighter text-white">5PM</span>
           </div>
           <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gray-400">
-            Restaurant · Lounge
+            
           </span>
         </div>
         <span className="text-[10px] uppercase tracking-[0.3em] text-gray-300">
-          Est. Nairobi
+          
         </span>
       </header>
 
@@ -415,7 +421,7 @@ function Landing({ onNavigate }: { onNavigate: (v: View) => void }) {
           style={{ border: '1px solid rgba(128,0,32,0.15)' }}>
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FF8C00]" />
           <span className="text-[9px] font-bold uppercase tracking-[0.28em]"
-            style={{ color: '#800020' }}>Open Today</span>
+            style={{ color: '#800020' }}>5pm MENU</span>
         </div>
 
         {/* Heading */}
