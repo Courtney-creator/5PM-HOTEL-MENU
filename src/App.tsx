@@ -291,14 +291,14 @@ const DRINKS_MENU: DrinkItem[] = [
   { id: 511, name: 'Martini Rosso',    category: 'Tequila, Gin & Vodka', price: 'KES 3,500', description: 'Sweet, herbal and richly aromatic vermouth.' },
 
   // SHOTS
-  { id: 600, name: 'Jose Cuervo — Double', category: 'Shots', price: 'KES 600', description: 'Double tequila shot, salt and lime on the side.' },
-  { id: 601, name: 'Jose Cuervo — Single', category: 'Shots', price: 'KES 300', description: 'Single shot of golden Jose Cuervo tequila.' },
-  { id: 602, name: 'Tanqueray — Double',   category: 'Shots', price: 'KES 700', description: 'Double shot of crisp London Dry Gin.' },
-  { id: 603, name: 'Tanqueray — Single',   category: 'Shots', price: 'KES 350', description: 'Single shot of Tanqueray gin.' },
-  { id: 604, name: 'J. Walker — Double',   category: 'Shots', price: 'KES 600', description: 'Double shot of smooth, full-bodied Johnnie Walker.' },
-  { id: 605, name: 'J. Walker — Single',   category: 'Shots', price: 'KES 300', description: 'Single shot of Johnnie Walker Scotch.' },
-  { id: 606, name: 'Jagermeister — Double',category: 'Shots', price: 'KES 600', description: 'Double shot of ice-cold Jägermeister.' },
-  { id: 607, name: 'Jagermeister — Single',category: 'Shots', price: 'KES 300', description: 'Single shot of ice-cold Jägermeister.' },
+  { id: 600, name: 'Jose Cuervo  Double', category: 'Shots', price: 'KES 600', description: 'Double tequila shot, salt and lime on the side.' },
+  { id: 601, name: 'Jose Cuervo  Single', category: 'Shots', price: 'KES 300', description: 'Single shot of golden Jose Cuervo tequila.' },
+  { id: 602, name: 'Tanqueray  Double',   category: 'Shots', price: 'KES 700', description: 'Double shot of crisp London Dry Gin.' },
+  { id: 603, name: 'Tanqueray  Single',   category: 'Shots', price: 'KES 350', description: 'Single shot of Tanqueray gin.' },
+  { id: 604, name: 'J. Walker  Double',   category: 'Shots', price: 'KES 600', description: 'Double shot of smooth, full-bodied Johnnie Walker.' },
+  { id: 605, name: 'J. Walker  Single',   category: 'Shots', price: 'KES 300', description: 'Single shot of Johnnie Walker Scotch.' },
+  { id: 606, name: 'Jagermeister  Double',category: 'Shots', price: 'KES 600', description: 'Double shot of ice-cold Jägermeister.' },
+  { id: 607, name: 'Jagermeister  Single',category: 'Shots', price: 'KES 300', description: 'Single shot of ice-cold Jägermeister.' },
 ];
 
 const DRINK_CATEGORIES: { label: DrinkCategory; icon: React.ReactNode }[] = [
