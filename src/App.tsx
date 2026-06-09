@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   UtensilsCrossed,
   Wine,
@@ -352,34 +352,69 @@ function FilterPills<T extends string>({
   active: T;
   onChange: (v: T) => void;
 }) {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const [showLeft, setShowLeft] = React.useState(false);
+  const [showRight, setShowRight] = React.useState(true);
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setShowLeft(el.scrollLeft > 10);
+    setShowRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 10);
+  };
+
+  const scroll = (dir: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({ left: dir === 'right' ? 120 : -120, behavior: 'smooth' });
+  };
+
   return (
-    <div className="relative">
-      <div className="-mx-5 overflow-x-auto px-5 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div className="flex gap-2.5 pb-1">
-          {categories.map(({ label, icon }) => {
-            const on = active === label;
-            return (
-              <button
-                key={label}
-                onClick={() => onChange(label)}
-                className={`flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
-                  on
-                    ? 'border-[#800020] bg-[#800020] text-white shadow-md'
-                    : 'border-gray-200 bg-white text-gray-700 hover:border-[#800020]/40 hover:text-[#800020]'
-                }`}
-              >
-                <span className={on ? 'text-white' : 'text-[#800020]'}>{icon}</span>
-                {label}
-              </button>
-            );
-          })}
-        </div>
+    <div className="relative flex items-center">
+      {/* Left arrow */}
+      {showLeft && (
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md border border-gray-200 transition-all"
+          style={{ color: '#800020' }}
+        >
+          ‹
+        </button>
+      )}
+
+      <div
+        ref={scrollRef}
+        onScroll={handleScroll}
+        className="flex gap-2.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        style={{ scrollBehavior: 'smooth' }}
+      >
+        {categories.map(({ label, icon }) => {
+          const on = active === label;
+          return (
+            <button
+              key={label}
+              onClick={() => onChange(label)}
+              className={`flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
+                on
+                  ? 'border-[#800020] bg-[#800020] text-white shadow-md'
+                  : 'border-gray-200 bg-white text-gray-700 hover:border-[#800020]/40 hover:text-[#800020]'
+              }`}
+            >
+              <span className={on ? 'text-white' : 'text-[#800020]'}>{icon}</span>
+              {label}
+            </button>
+          );
+        })}
       </div>
-      {/* Fade + arrow indicator */}
-      <div className="absolute right-0 top-0 h-full w-16 pointer-events-none flex items-center justify-end pr-1"
-        style={{ background: 'linear-gradient(to right, transparent, maroon)' }}>
-        <span className="text-gray-400 text-sm animate-pulse">›</span>
-      </div>
+
+      {/* Right arrow */}
+      {showRight && (
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md border border-gray-200 transition-all"
+          style={{ color: '#800020' }}
+        >
+          ›
+        </button>
+      )}
     </div>
   );
 }
