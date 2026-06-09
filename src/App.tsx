@@ -115,7 +115,7 @@ export const IMG = {
   whiteugali: "/wugali.jpg",
   brownugali: "/bugali.jpg",
   pumpkinugali: "/pum.jpg",
-  veg: U("photo-1540420773420-3366772f4999"),
+  veg: "/sukuma.jpg",
   cabbage: "/cabbage.jpg",
   whiterice: "/rice.jpg",
   vegetablerice: "/veger.jpg",
