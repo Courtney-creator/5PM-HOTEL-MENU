@@ -558,13 +558,20 @@ function FoodMenu({ onNavigate }: { onNavigate: (v: View) => void }) {
             <span style={{ color: '#800020' }}>5PM</span>
             <span className="text-gray-900"> · Food</span>
           </h1>
-          <button
+<button
             onClick={() => onNavigate('drinks')}
             className="text-lg font-extrabold transition-colors hover:opacity-75"
             style={{ color: '#800020' }}
           >
             Drinks →
           </button>
+        </div>
+        <div className="mx-auto max-w-6xl px-5 pb-3 sm:px-8">
+          <FilterPills
+            categories={FOOD_CATEGORIES}
+            active={activeCategory}
+            onChange={(v) => { setActiveCategory(v); setQuery(''); }}
+          />
         </div>
       </header>
 
@@ -588,14 +595,6 @@ function FoodMenu({ onNavigate }: { onNavigate: (v: View) => void }) {
             className="w-full rounded-full border border-gray-200 bg-white py-3 pl-11 pr-4 text-sm shadow-sm outline-none transition-all"
             onFocus={(e) => { e.target.style.borderColor = '#800020'; e.target.style.boxShadow = '0 0 0 3px rgba(128,0,32,0.08)'; }}
             onBlur={(e) => { e.target.style.borderColor = '#e5e7eb'; e.target.style.boxShadow = 'none'; }}
-          />
-        </div>
-
-        <div className="mb-8">
-          <FilterPills
-            categories={FOOD_CATEGORIES}
-            active={activeCategory}
-            onChange={(v) => { setActiveCategory(v); setQuery(''); }}
           />
         </div>
 
@@ -650,6 +649,13 @@ function DrinksMenu({ onNavigate }: { onNavigate: (v: View) => void }) {
             Food →
           </button>
         </div>
+        <div className="mx-auto max-w-5xl px-5 pb-3 sm:px-8">
+          <FilterPills
+            categories={DRINK_CATEGORIES}
+            active={activeCategory}
+            onChange={setActiveCategory}
+          />
+        </div>
       </header>
 
       <section className="relative h-[280px] w-full overflow-hidden sm:h-[360px]">
@@ -671,14 +677,7 @@ function DrinksMenu({ onNavigate }: { onNavigate: (v: View) => void }) {
       </section>
 
       <main className="mx-auto max-w-5xl px-5 py-8 pb-24 sm:px-8">
-        <div className="mb-8">
-          <FilterPills
-            categories={DRINK_CATEGORIES}
-            active={activeCategory}
-            onChange={setActiveCategory}
-          />
-        </div>
-
+      
         <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
           <ul className="divide-y divide-gray-100">
             {items.map((d) => (
